@@ -9,3 +9,5 @@ tests/exit0
 tests/exit1
 tests/rtlib
 tests/sha256
+# ignore tag file
+tags
