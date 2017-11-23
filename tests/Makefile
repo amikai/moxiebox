@@ -18,11 +18,16 @@ TESTS = \
 	exit0 \
 	exit1 \
 	rtlib \
-	sha256
+	sha256 \
+	fib
 
 all: $(TESTS)
 
 %: %.c
+	$(MOX_CC) $(CFLAGS) -c $<
+	$(MOX_CC) $(LDFLAGS) -o $@ $@.o
+
+%: %.S
 	$(MOX_CC) $(CFLAGS) -c $<
 	$(MOX_CC) $(LDFLAGS) -o $@ $@.o
 
