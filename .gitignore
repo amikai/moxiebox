@@ -11,3 +11,5 @@ tests/rtlib
 tests/sha256
 # ignore tag file
 tags
+# ignore input data file
+tests/data
